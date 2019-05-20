@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Utenti} from "./utenti";
 @Component({
@@ -7,7 +7,7 @@ import {Utenti} from "./utenti";
   styleUrls: ['./registrazione.component.css']
 })
 export class RegistrazioneComponent implements OnInit {
-  vettutenti : Utenti[] = new Array<Utenti>(); 
+  @Input() vettUtenti;
   myForm: FormGroup; 
   constructor(fb: FormBuilder) { 
     
@@ -42,7 +42,7 @@ export class RegistrazioneComponent implements OnInit {
     u.email = this.myForm.controls['email'].value;
     u.password = this.myForm.controls['password'].value;
     
-    this.vettutenti.push(u);
+    this.vettUtenti.push(u);
     
   }
 }

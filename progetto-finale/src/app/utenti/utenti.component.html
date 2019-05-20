@@ -1,6 +1,7 @@
-<div>
-    <h3>Nome: {{nome}}</h3>
-    <h3>Cognome: {{cognome}}</h3>
-    <h3>Email: {{email}}</h3>
-    <h3>Password: {{password}}</h3>
+<div *ngFor = "let u of vettUtenti">
+    <h3>Nome: {{u.nome}}</h3>
+    <h3>Cognome: {{u.cognome}}</h3>
+    <h3>Email: {{u.email}}</h3>
+    <h3>Password: {{u.password}}</h3>
+    
 </div>

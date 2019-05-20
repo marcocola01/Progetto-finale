@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Utenti} from "./registrazione/utenti";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'progetto-finale';
+  vettUtenti : Utenti[] = new Array<Utenti>(); 
+  ngOnInit()
+  {
+    
+  }
+  
 }
