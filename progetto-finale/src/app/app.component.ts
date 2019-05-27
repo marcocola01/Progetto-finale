@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Utenti} from "./registrazione/utenti";
+import {LISTAUTENTI} from "./registrazione/mock-utenti";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import {Utenti} from "./registrazione/utenti";
 })
 export class AppComponent {
   title = 'progetto-finale';
-  vettUtenti : Utenti[] = new Array<Utenti>(); 
+  vettUtenti : Utenti[] = LISTAUTENTI;
   ngOnInit()
   {
     
