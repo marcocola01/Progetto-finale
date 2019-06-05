@@ -1,6 +1,5 @@
-<form [formGroup]="myForm" class="jumbtron" (ngSubmit)="onSubmit()">
-	<h1 style="max-width: 300px; text-align: left; font-size: 20px;">Sei gia' registrato ? Inserisci username e password qui
-		sotto:</h1>
+<form [formGroup]="myForm" class="jumbtron" (ngSubmit)="onLogin()">
+	<h1 style="max-width: 300px; text-align: left; font-size: 20px;">Sei gia' registrato ? Inserisci username e password qui sotto:</h1>
 	<input style = "max-width: 300px;"  type = "text" [formControl] = "myForm.controls['nomeinput']" class = "form-control">
     <div style = "max-width: 300px;" *ngIf="!myForm.controls['nomeinput'].valid" class="alert alert-danger">il campo username non è valido</div>
     <div  style = "max-width: 300px;" *ngIf="myForm.controls['nomeinput'].hasError('required')" class="alert alert-danger">il campo username non è stato compilato</div>
@@ -11,6 +10,6 @@
 
 
 
-  <button type = "submit"  class="btn btn-primary" (click)"onLogin()" >Login</button>
+<button type = "submit"  class="btn btn-primary" (click)="onLogin()">Login</button>
 
 </form>

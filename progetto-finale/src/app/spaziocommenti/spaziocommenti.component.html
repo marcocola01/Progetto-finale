@@ -1,4 +1,20 @@
 <div>
-    <h3>Spazio dove commentare cose</h3>
-    
+	<form>
+		<div>
+			<h2> Spazio dove commentare cose</h2>
+			<ul class="annunci">
+				<li *ngFor="let annuncio of lista">
+					<article>
+						{{annuncio.nome}} {{annuncio.cognome}}  <br> {{annuncio.prodotto}} {{annuncio.descrizione}} <br>
+		<input #comment placeholder = "inserisci un commento">
+        </article>
+            <div>
+              <button (click) = "onAggiungiCommento(annuncio, commento)" >aggiungi </button>
+            </div>
+</li>
+               </ul>
+        </div>
+        {{errore}}
+	</form>
+
 </div>
