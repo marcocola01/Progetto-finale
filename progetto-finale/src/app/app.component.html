@@ -1,10 +1,10 @@
- 
+
 	<h3 style="text-align:center">CompraVendita automobili</h3>
 
 	<div class="container-fluid">
 		<div class="row">
 			<app-registrazione class="col-sm-4" [vettUtenti]="vettUtenti"></app-registrazione>
-			<app-login class="col-sm-4" class="left"></app-login>
+			<app-login class="col-sm-4" class="left" [vettUtenti] = "vettUtenti" [utenteLoggato] = "utenteLoggato"></app-login>
 			<app-utenti class="col-sm-4" [vettUtenti]="vettUtenti"></app-utenti>
 		</div>
 		<app-spaziocommenti></app-spaziocommenti>

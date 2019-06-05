@@ -1,16 +1,16 @@
 <form [formGroup]="myForm" class="jumbtron" (ngSubmit)="onSubmit()">
 	<h1 style="max-width: 300px; text-align: left; font-size: 20px;">Sei gia' registrato ? Inserisci username e password qui
 		sotto:</h1>
-	<input style = "max-width: 300px;"  type = "text" [formControl] = "myForm.controls['nome']" class = "form-control">
-    <div style = "max-width: 300px;" *ngIf="!myForm.controls['nome'].valid" class="alert alert-danger">il campo username non è valido</div>
-    <div  style = "max-width: 300px;" *ngIf="myForm.controls['nome'].hasError('required')" class="alert alert-danger">il campo username non è stato compilato</div>
+	<input style = "max-width: 300px;"  type = "text" [formControl] = "myForm.controls['nomeinput']" class = "form-control">
+    <div style = "max-width: 300px;" *ngIf="!myForm.controls['nomeinput'].valid" class="alert alert-danger">il campo username non è valido</div>
+    <div  style = "max-width: 300px;" *ngIf="myForm.controls['nomeinput'].hasError('required')" class="alert alert-danger">il campo username non è stato compilato</div>
 
-    <input style = "max-width: 300px;" style = "max-width: 300px;" type = "text" [formControl] = "myForm.controls['cognome']" class = "form-control">
-    <div  style = "max-width: 300px;" *ngIf="!myForm.controls['cognome'].valid" class="alert alert-danger">il campo password non è valido</div>
-    <div  style = "max-width: 300px;" *ngIf="myForm.controls['cognome'].hasError('required')" class="alert alert-danger">il campo password non è stato compilato</div>
+    <input style = "max-width: 300px;" style = "max-width: 300px;" type = "text" [formControl] = "myForm.controls['passwordinput']" class = "form-control">
+    <div  style = "max-width: 300px;" *ngIf="!myForm.controls['passwordinput'].valid" class="alert alert-danger">il campo password non è valido</div>
+    <div  style = "max-width: 300px;" *ngIf="myForm.controls['passwordinput'].hasError('required')" class="alert alert-danger">il campo password non è stato compilato</div>
 
 
 
-  <button type = "submit"  class="btn btn-primary" >Login</button>
+  <button type = "submit"  class="btn btn-primary" (click)"onLogin()" >Login</button>
 
 </form>

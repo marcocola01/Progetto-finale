@@ -10,6 +10,7 @@ import {LISTAUTENTI} from "./registrazione/mock-utenti";
 export class AppComponent {
   title = 'progetto-finale';
   vettUtenti : Utenti[] = LISTAUTENTI;
+  utenteLoggato : Utenti = new Utenti();
   ngOnInit()
   {
     
