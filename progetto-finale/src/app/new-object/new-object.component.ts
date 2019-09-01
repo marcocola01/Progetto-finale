@@ -20,7 +20,7 @@ export class NewObjectComponent implements OnInit {
       'descrizione': ['', Validators.required],
       'kilometri': ['', Validators.required],
       'proprietario': ['', Validators.required],
-      'anno': ['', Validators.required],
+      'prezzo': ['', Validators.required],
 
     });
 
