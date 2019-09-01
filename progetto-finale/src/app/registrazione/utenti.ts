@@ -3,5 +3,5 @@ export class Utenti{
     cognome: string;
     email: string;
     password: string;
-    
+    auto: string;
 }
