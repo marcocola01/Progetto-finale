@@ -1,7 +1,7 @@
 export class Oggetti{
+    auto: string;
     descrizione: string;
     kilometri: string;
-    anno: string;
-    prezzo: string;
     proprietario: string;
+    prezzo: string;
 }

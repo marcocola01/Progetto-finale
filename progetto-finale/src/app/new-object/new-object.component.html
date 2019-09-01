@@ -1,21 +1,26 @@
 <form [formGroup] = "myForm" class = "jumbtron"  (ngSubmit) = "onSubmit()">
-    <h1 style = "max-width: 300px; text-align: left; font-size: 20px;">Non sei ancora registrato ? Registrati inserendo i tuoi dati qui sotto:</h1>
-   <input style = "max-width: 300px;"  type = "text" [formControl] = "myForm.controls['nome']" class = "form-control">
-    <div style = "max-width: 300px;" *ngIf="!myForm.controls['nome'].valid" class="alert alert-danger">il campo nome non è valido</div>
-    <div  style = "max-width: 300px;" *ngIf="myForm.controls['nome'].hasError('required')" class="alert alert-danger">il campo nome non è stato compilato</div>
+    <h1 style = "max-width: 300px; text-align: left; font-size: 20px;">Vuoi vendere un'auto ? Inserisci qui sotto i tuoi dati per metterla nella lista:</h1>
+   <input style = "max-width: 300px;"  type = "text" [formControl] = "myForm.controls['auto']" class = "form-control">
+    <div style = "max-width: 300px;" *ngIf="!myForm.controls['auto'].valid" class="alert alert-danger">il campo auto non è valido</div>
+    <div  style = "max-width: 300px;" *ngIf="myForm.controls['auto'].hasError('required')" class="alert alert-danger">il campo auto non è stato compilato</div>
 
-    <input style = "max-width: 300px;" style = "max-width: 300px;" type = "text" [formControl] = "myForm.controls['cognome']" class = "form-control">
-    <div  style = "max-width: 300px;" *ngIf="!myForm.controls['cognome'].valid" class="alert alert-danger">il campo cognome non è valido</div>
-    <div  style = "max-width: 300px;" *ngIf="myForm.controls['cognome'].hasError('required')" class="alert alert-danger">il campo cognome non è stato compilato</div>
+    <input style = "max-width: 300px;" style = "max-width: 300px;" type = "text" [formControl] = "myForm.controls['descrizione']" class = "form-control">
+    <div  style = "max-width: 300px;" *ngIf="!myForm.controls['descrizione'].valid" class="alert alert-danger">il campo descrizione non è valido</div>
+    <div  style = "max-width: 300px;" *ngIf="myForm.controls['descrizione'].hasError('required')" class="alert alert-danger">il campo descrizione non è stato compilato</div>
 
-    <input style = "max-width: 300px;"   type = "email" [formControl] = "myForm.controls['email']" class = "form-control">
-    <div style = "max-width: 300px;" *ngIf="!myForm.controls['email'].valid" class="alert alert-danger">il campo email non è valido</div>
-    <div style = "max-width: 300px;" *ngIf="myForm.controls['email'].hasError('required')" class="alert alert-danger">il campo email non è stato compilato</div>
+    <input style = "max-width: 300px;"   type = "text" [formControl] = "myForm.controls['kilometri']" class = "form-control">
+    <div style = "max-width: 300px;" *ngIf="!myForm.controls['kilometri'].valid" class="alert alert-danger">il campo kilometri non è valido</div>
+    <div style = "max-width: 300px;" *ngIf="myForm.controls['kilometri'].hasError('required')" class="alert alert-danger">il campo kilometri non è stato compilato</div>
 
-    <input style = "max-width: 300px;" type = "password" [formControl] = "myForm.controls['password']" class = "form-control">
-    <div style = "max-width: 300px;" *ngIf="!myForm.controls['password'].valid" class="alert alert-danger">il campo password non è valido</div>
-    <div style = "max-width: 300px;" *ngIf="myForm.controls['password'].hasError('required')" class="alert alert-danger">il campo password non è stato compilato</div>
+    <input style = "max-width: 300px;" type = "text" [formControl] = "myForm.controls['proprietario']" class = "form-control">
+    <div style = "max-width: 300px;" *ngIf="!myForm.controls['proprietario'].valid" class="alert alert-danger">il campo proprietario non è valido</div>
+    <div style = "max-width: 300px;" *ngIf="myForm.controls['proprietario'].hasError('required')" class="alert alert-danger">il campo proprietario non è stato compilato</div>
 
-  <button type = "submit"  class="btn btn-primary" >Registrati</button>
+    <input style = "max-width: 300px;" type = "text" [formControl] = "myForm.controls['prezzo']" class = "form-control">
+    <div style = "max-width: 300px;" *ngIf="!myForm.controls['prezzo'].valid" class="alert alert-danger">il campo prezzo non è valido</div>
+    <div style = "max-width: 300px;" *ngIf="myForm.controls['prezzo'].hasError('required')" class="alert alert-danger">il campo prezzo non è stato compilato</div>
+
+
+  <button type = "submit"  class="btn btn-primary" >Aggiungi auto</button>
 
 </form>
